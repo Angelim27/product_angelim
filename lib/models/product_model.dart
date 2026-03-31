@@ -15,10 +15,10 @@ class Product { //  id, title, price, category, image, dan rating
     required this.rating,
   });
   
-  bool get isExpensive => price > 50;
+  bool get isExpensive => price > 50; // • Logic Challenge 1: Getter isExpensive (true jika harga > $50).
 
   String getShortTitle() {
-    return title.length > 35 ? '${title.substring(0, 35)}...' : title;
+    return title.length > 35 ? '${title.substring(0, 35)}...' : title; // • Logic Challenge 2: Method getShortTitle() (potong judul di 35 karakter + "...").
   }
 
   factory Product.fromJson(Map<String, dynamic> json) {
